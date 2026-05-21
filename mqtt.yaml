@@ -1,0 +1,1301 @@
+  sensor:
+
+# ==========================================
+    # --- MODUL 1 ---
+    # ==========================================
+    - name: "Solax Baterie 1 - Proud"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.current }}"
+      unit_of_measurement: "A"
+      device_class: current
+      state_class: measurement
+    - name: "Solax Baterie 1 - Kapacita"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.capacity }}"
+      unit_of_measurement: "Ah"
+      icon: mdi:battery-high
+      state_class: measurement
+    - name: "Solax Baterie 1 - SOC"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.soc }}"
+      unit_of_measurement: "%"
+      device_class: battery
+      state_class: measurement
+    - name: "Solax Baterie 1 - Celkové napětí"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.pack_voltage }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek Min napětí"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_min }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek Max napětí"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_max }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek Průměr"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_avg }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Rozdíl článků (Delta)"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_delta }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Teplota Min"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.temp_min }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 1 - Teplota Max"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.temp_max }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    # --- TEPLOTY MODUL 1 ---
+    - name: "Solax Baterie 1 - Teplota 01"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.temp_01 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 1 - Teplota 02"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.temp_02 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 1 - Teplota 03"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.temp_03 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 1 - Teplota 04"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.temp_04 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 1 - Teplota 05"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.temp_05 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 1 - Teplota 06"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.temp_06 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 1 - Teplota 07"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.temp_07 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 1 - Teplota 08"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.temp_08 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    # --- ČLÁNKY MODUL 1 ---
+    - name: "Solax Baterie 1 - Článek 01"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_01 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 02"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_02 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 03"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_03 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 04"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_04 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 05"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_05 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 06"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_06 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 07"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_07 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 08"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_08 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 09"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_09 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 10"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_10 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 11"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_11 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 12"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_12 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 13"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_13 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 14"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_14 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 15"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_15 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 16"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_16 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 17"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_17 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 1 - Článek 18"
+      state_topic: "solax/t58/1/state"
+      value_template: "{{ value_json.cell_18 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+# ==========================================
+    # --- BALANCERY MODUL 1 ---
+    # ==========================================
+    - name: "Solax Baterie 1 - Balancer 01"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(1) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 02"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(2) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 03"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(4) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 04"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(8) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 05"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(16) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 06"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(32) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 07"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(64) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 08"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(128) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 09"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(256) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 10"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(512) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 11"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(1024) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 12"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(2048) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 13"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(4096) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 14"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(8192) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 15"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(16384) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 16"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(32768) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 17"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(65536) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 1 - Balancer 18"
+      state_topic: "solax/t58/1/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(131072) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+
+# ==========================================
+    # --- MODUL 2 ---
+    # ==========================================
+    - name: "Solax Baterie 2 - Proud"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.current }}"
+      unit_of_measurement: "A"
+      device_class: current
+      state_class: measurement
+    - name: "Solax Baterie 2 - Kapacita"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.capacity }}"
+      unit_of_measurement: "Ah"
+      icon: mdi:battery-high
+      state_class: measurement
+    - name: "Solax Baterie 2 - SOC"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.soc }}"
+      unit_of_measurement: "%"
+      device_class: battery
+      state_class: measurement
+    - name: "Solax Baterie 2 - Celkové napětí"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.pack_voltage }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek Min napětí"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_min }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek Max napětí"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_max }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek Průměr"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_avg }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Rozdíl článků (Delta)"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_delta }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Teplota Min"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.temp_min }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 2 - Teplota Max"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.temp_max }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    # --- TEPLOTY MODUL 2 ---
+    - name: "Solax Baterie 2 - Teplota 01"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.temp_01 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 2 - Teplota 02"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.temp_02 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 2 - Teplota 03"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.temp_03 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 2 - Teplota 04"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.temp_04 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 2 - Teplota 05"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.temp_05 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 2 - Teplota 06"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.temp_06 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 2 - Teplota 07"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.temp_07 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 2 - Teplota 08"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.temp_08 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    # --- ČLÁNKY MODUL 2 ---
+    - name: "Solax Baterie 2 - Článek 01"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_01 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 02"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_02 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 03"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_03 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 04"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_04 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 05"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_05 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 06"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_06 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 07"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_07 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 08"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_08 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 09"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_09 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 10"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_10 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 11"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_11 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 12"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_12 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 13"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_13 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 14"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_14 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 15"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_15 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 16"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_16 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 17"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_17 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 2 - Článek 18"
+      state_topic: "solax/t58/2/state"
+      value_template: "{{ value_json.cell_18 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+# ==========================================
+    # --- BALANCERY MODUL 2 ---
+    # ==========================================
+    - name: "Solax Baterie 2 - Balancer 01"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(1) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 02"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(2) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 03"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(4) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 04"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(8) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 05"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(16) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 06"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(32) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 07"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(64) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 08"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(128) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 09"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(256) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 10"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(512) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 11"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(1024) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 12"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(2048) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 13"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(4096) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 14"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(8192) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 15"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(16384) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 16"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(32768) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 17"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(65536) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 2 - Balancer 18"
+      state_topic: "solax/t58/2/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(131072) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+
+# ==========================================
+    # --- MODUL 3 ---
+    # ==========================================
+# --- ZÁKLADNÍ STAV BATERIE ---
+    - name: "Solax Baterie 3 - Proud"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.current }}"
+      unit_of_measurement: "A"
+      device_class: current
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Kapacita"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.capacity }}"
+      unit_of_measurement: "Ah" # Pokud to ukazuje nesmysl, můžeš "Ah" smazat
+      icon: mdi:battery-high
+      state_class: measurement
+
+    # --- STATISTIKY ČLÁNKŮ ---
+    - name: "Solax Baterie 3 - Článek Min napětí"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_min }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek Max napětí"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_max }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek Průměr"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_avg }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Rozdíl článků (Delta)"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_delta }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    # --- TEPLOTY ---
+    - name: "Solax Baterie 3 - Teplota Min"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.temp_min }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Teplota Max"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.temp_max }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Teplota 01"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.temp_01 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Teplota 02"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.temp_02 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Teplota 03"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.temp_03 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Teplota 04"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.temp_04 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Teplota 05"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.temp_05 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Teplota 06"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.temp_06 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Teplota 07"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.temp_07 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Teplota 08"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.temp_08 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - SOC"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.soc }}"
+      unit_of_measurement: "%"
+      device_class: battery
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Celkové napětí"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.pack_voltage }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+      
+    - name: "Solax Baterie 3 - Článek 01"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_01 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 02"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_02 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 03"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_03 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 04"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_04 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 05"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_05 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 06"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_06 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 07"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_07 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 08"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_08 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 09"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_09 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 10"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_10 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 11"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_11 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 12"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_12 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 13"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_13 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 14"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_14 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 15"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_15 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 16"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_16 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 17"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_17 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "Solax Baterie 3 - Článek 18"
+      state_topic: "solax/t58/3/state"
+      value_template: "{{ value_json.cell_18 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+# ==========================================
+    # --- BALANCERY MODUL 3 ---
+    # ==========================================
+    - name: "Solax Baterie 3 - Balancer 01"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(1) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 02"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(2) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 03"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(4) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 04"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(8) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 05"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(16) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 06"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(32) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 07"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(64) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 08"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(128) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 09"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(256) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 10"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(512) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 11"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(1024) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 12"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(2048) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 13"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(4096) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 14"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(8192) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 15"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(16384) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 16"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(32768) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 17"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(65536) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 3 - Balancer 18"
+      state_topic: "solax/t58/3/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(131072) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+
+ # ==========================================
+# --- MODUL 4 ---
+# ==========================================
+    - name: "Solax Baterie 4 - Proud"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.current }}"
+      unit_of_measurement: "A"
+      device_class: current
+      state_class: measurement
+    - name: "Solax Baterie 4 - Kapacita"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.capacity }}"
+      unit_of_measurement: "Ah"
+      icon: mdi:battery-high
+      state_class: measurement
+    - name: "Solax Baterie 4 - SOC"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.soc }}"
+      unit_of_measurement: "%"
+      device_class: battery
+      state_class: measurement
+    - name: "Solax Baterie 4 - Celkové napětí"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.pack_voltage }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek Min napětí"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_min }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek Max napětí"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_max }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek Průměr"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_avg }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Rozdíl článků (Delta)"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_delta }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Teplota Min"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.temp_min }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 4 - Teplota Max"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.temp_max }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    # --- TEPLOTY MODUL 4 ---
+    - name: "Solax Baterie 4 - Teplota 01"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.temp_01 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 4 - Teplota 02"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.temp_02 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 4 - Teplota 03"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.temp_03 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 4 - Teplota 04"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.temp_04 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 4 - Teplota 05"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.temp_05 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 4 - Teplota 06"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.temp_06 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 4 - Teplota 07"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.temp_07 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    - name: "Solax Baterie 4 - Teplota 08"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.temp_08 }}"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+    # --- ČLÁNKY MODUL 4 ---
+    - name: "Solax Baterie 4 - Článek 01"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_01 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 02"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_02 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 03"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_03 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 04"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_04 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 05"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_05 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 06"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_06 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 07"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_07 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 08"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_08 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 09"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_09 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 10"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_10 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 11"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_11 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 12"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_12 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 13"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_13 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 14"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_14 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 15"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_15 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 16"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_16 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 17"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_17 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+    - name: "Solax Baterie 4 - Článek 18"
+      state_topic: "solax/t58/4/state"
+      value_template: "{{ value_json.cell_18 }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+
+    #==========================================
+    # --- BALANCERY MODUL 4 ---
+    # ==========================================
+    - name: "Solax Baterie 4 - Balancer 01"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(1) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 02"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(2) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 03"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(4) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 04"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(8) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 05"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(16) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 06"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(32) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 07"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(64) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 08"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(128) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 09"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(256) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 10"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(512) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 11"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(1024) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 12"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(2048) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 13"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(4096) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 14"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(8192) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 15"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(16384) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 16"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(32768) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 17"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(65536) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
+
+    - name: "Solax Baterie 4 - Balancer 18"
+      state_topic: "solax/t58/4/state"
+      value_template: "{% if value_json.balancer_mask | bitwise_and(131072) %}Aktivní{% else %}Neaktivní{% endif %}"
+      icon: mdi:car-battery
