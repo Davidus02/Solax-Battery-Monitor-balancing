@@ -65,7 +65,6 @@ REG_TEMP_START   = 26   # 8 registers
 REG_CAPACITY     = 36
 REG_TOTAL        = 37
 
-
 def _s16(v: int) -> int:
     return v - 65536 if v > 32767 else v
 
@@ -84,7 +83,13 @@ def registers_to_data(regs: list[int]) -> dict | None:
     data["temp_min"]     = round(_s16(regs[REG_TEMP_MIN]) / 100, 1)
     data["temp_max"]     = round(_s16(regs[REG_TEMP_MAX]) / 100, 1)
     data["capacity"]     = round(regs[REG_CAPACITY] / 10, 1)
+    data["balancer_mask"] = regs[34] | ((regs[35] & 0xC000) << 2)
 
+    
+    # Diagnostický výpis VŠECH surových dat z Modbusu
+    data["raw_regs"] = regs
+
+    
     cells = []
     for i in range(18):
         v = round(_s16(regs[REG_CELL_START + i]) / 1000, 3)
