@@ -11,20 +11,23 @@ Příprava:
    Zpřístupnění složek přes Samba: V Obchodě s doplňky najdi a nainstaluj Samba share. Před spuštěním přejdi na kartu Konfigurace u tohoto doplňku. Zadej si své údaje a        připoj Home Assistenta do Windows průzkumníku 
 
 
-1.Instalace a nastavení MQTT Brokera:Zajišťuje komunikaci mezi addonem a Home Assistantem.Přejdi do Nastavení -> Doplňky -> Obchod s doplňky (Add-on store).Vyhledej a nainstaluj doplněk Mosquitto broker.Po instalaci zaškrtni Spustit při startu (Start on boot) a Hlídací pes (Watchdog) a doplněk spusť.Přejdi do Nastavení -> Zařízení a služby -> Přidat integraci.Vyhledej MQTT a přidej ji. Home Assistant by měl Mosquitto brokera automaticky detekovat. Potvrď připojení (případně zadej přihlašovací údaje do HA, pokud jsou vyžadovány).
+   Instalace a nastavení MQTT Brokera:Zajišťuje komunikaci mezi addonem a Home Assistantem. Přejdi do Nastavení -> Doplňky -> Obchod s doplňky (Add-on store).Vyhledej a        nainstaluj doplněk Mosquitto broker.Po instalaci doplněk spusť. Přejdi do Nastavení -> Zařízení a služby -> Přidat integraci. Vyhledej MQTT a přidej ji. Home Assistant      by měl Mosquitto brokera automaticky detekovat.
 
 
-2.Zpřístupnění složek přes Samba Share:Příprava pro přenos souborů z Windows.V Obchodě s doplňky najdi a nainstaluj Samba share.Před spuštěním přejdi na kartu Konfigurace u tohoto doplňku.Nastav si vlastní username (uživatelské jméno) a password (heslo) a konfiguraci ulož.Spusť doplněk Samba share.
+Stažení a nahrání Solax Addonu: Stáhni si celý projekt Solax Triple Power addonu z GitHubu (jako ZIP archiv) a rozbal ho ve svém počítači.Ve Windows otevři Průzkumník souborů a do adresního řádku zadej IP adresu tvého Home Assistanta ve formátu \\192.168.x.x. Přihlas se údaji, které sis vytvořil v doplňku Samba share. Otevři složku addons. Zkopíruj celou rozbalenou složku projektu přímo do složky addons.
 
 
-3.Stažení a nahrání Solax Addonu:Stáhni si celý projekt Solax Triple Power addonu z GitHubu (jako ZIP archiv) a rozbal ho ve svém počítači.Ve Windows otevři Průzkumník souborů a do adresního řádku zadej IP adresu tvého Home Assistanta ve formátu \\192.168.x.x (nahraď reálnou IP adresou).Přihlas se údaji, které sis vytvořil v doplňku Samba share.Otevři složku addons.Zkopíruj celou rozbalenou složku projektu (tu, která obsahuje soubory jako config.json nebo config.yaml, run.sh atd.) přímo do složky addons.
+Instalace lokálního addonu v HA: V Home Assistantovi přejdi do Nastavení -> Doplňky -> Obchod s doplňky. Vpravo nahoře klikni na tři tečky a vyber Zkontrolovat aktualizace (Check for updates). Tím se znovu načte seznam složek. Měl bys vidět novou sekci Lokální doplňky (Local add-ons). Klikni na Solax Triple Power addon a dej Nainstalovat. Přejdi na záložku Konfigurace v addonu a vyplň potřebné údaje: IP adresu/port desky a přihlašovací údaje k MQTT brokeru (IP adresa HA, port 1883, uživatel a heslo). Doplněk spusť a zkontroluj (Log), zda se úspěšně připojil k desce i k MQTT. 
+
+Pro MQTT doporučuji udělat svého vlastního uživatele který má omezené práva 
 
 
-4.Instalace lokálního addonu v HA:V Home Assistantovi přejdi do Nastavení -> Doplňky -> Obchod s doplňky.Vpravo nahoře klikni na tři tečky a vyber Zkontrolovat aktualizace (Check for updates). Tím se znovu načte seznam složek.Sjeď úplně dolů, kde bys měl vidět novou sekci Lokální doplňky (Local add-ons).Klikni na tvůj Solax Triple Power addon a dej Nainstalovat.Přejdi na záložku Konfigurace v addonu a vyplň potřebné údaje: IP adresu/port desky a přihlašovací údaje k MQTT brokeru (IP adresa HA, port 1883, uživatel a heslo).Doplněk spusť a zkontroluj záložku Deník (Log), zda se úspěšně připojil k desce i k MQTT.
+Zápis senzorů do YAML konfigurace: Je potřeba je přidat ručně do souboru mqtt.yaml.
 
 
-5.Zápis senzorů do YAML konfigurace:Vyčítání dat z MQTT.Pokud se senzory nevytvoří v HA samy přes MQTT autodiscovery, je potřeba je přidat ručně do souboru configuration.yaml (případně do mqtt.yaml, pokud máš konfiguraci rozdělenou).Zde je funkční úryvek, jak takový zápis vypadá. Témata (state_topic) musíš upravit podle toho, co reálně posílá tvůj addon.YAML    
 
+
+Zde je funkční úryvek, jak takový zápis vypadá. Témata (state_topic) musíš upravit podle toho, co reálně posílá tvůj addon.YAML    
 
 mqtt:
       sensor:
