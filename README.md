@@ -46,3 +46,6 @@ Celá mqtt složka s entitami je dodaná v souborech
       state_class: measurement
 
 Po úpravě YAML souboru je třeba jít: **Vývojářské nástroje** (Developer tools) a kliknout na **Znovu načíst ručně konfigurované entity MQTT** (nebo rovnou restartovat HA).
+
+Do složek Dashboard - 16:9 a Dashboard - 21:9 jsem dodal základní kód pro zobrazení v Home Assistentu.  Zatím jen základně napsané za pomocí AI.   Je třeba stáhnout addon za pomocí HACS -- HTML Jinja2 Template card
+
